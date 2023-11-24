@@ -1,5 +1,6 @@
 from django.urls import path, include
 from .views import HomeView, ViewDetalhadaPost, ViewAdicionarPost, ViewAtualizarPost, ViewApagarPost
+
 urlpatterns = [
     path('',HomeView,name="home"),
     path('post/<int:pk>',ViewDetalhadaPost,name="article-detail"),

@@ -15,3 +15,13 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse('article-detail',args=(str(self.id)))
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    nome = models.CharField(max_length=255)
+    corpo = models.TextField()
+    comment_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.post.título + " | " + str(self.nome)
+    
