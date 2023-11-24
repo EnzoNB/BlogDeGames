@@ -18,21 +18,7 @@
 
 
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorias
-                </a>
-                <ul class="dropdown-menu">
-
-                  {% for item in list_types %}
-                  <li><a class="dropdown-item" href="{% url 'Category' item %}">{{item}}</a></li>
-                  {% endfor %}
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="{% url 'lista_categorias' %}">Todas Categorias</a></li>
-                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/blogdegames/category/add">Criar Categoria</a></li>
-                </ul>
-              </li>
-
+              
 
 
               <li class="nav-item">
