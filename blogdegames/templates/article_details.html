@@ -21,6 +21,29 @@
     <br/><br/>
     <a href="{% url 'home' %}" class="btn btn-outline-dark">Retornar</a> <a href="{% url 'update_post' post.pk %}", class="btn btn-outline-warning">Editar</a> <a href="{% url 'delete_post' post.pk %}", class="btn btn-outline-danger">Excluir</a>
     <br><br/>
+
+
+
+
+
+
+    <hr>
+    <h2>Comentários</h2>
+    <br>
+
+    {% if not post.comments.all %}
+        Sem comentários	por enquanto ;-; <a href="{% url 'add_comment' post.pk %}"class="btn btn-info">Adicionar Comentário</a>
+
+    {% else %}
+        <a href="{% url 'add_comment' post.pk %}"class="btn btn-info">Adicionar Comentário</a><br>
+        {% for comment in post.comments.all|dictsortreversed:"comment_date" %}
+            <strong>{{comment.nome}} - {{comment.comment_date|date:"d/m/Y H:i"}}</strong>
+            <br>
+            {{comment.corpo}}
+            <br>
+        {% endfor %}
+    {% endif %}
+    <br>
     <hr>
 
     {% endblock %}
