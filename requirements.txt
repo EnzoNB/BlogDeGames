@@ -1,7 +1,7 @@
 altgraph==0.17.2
 asgiref==3.7.2
 clipboard==0.0.4
-Django==4.2.7
+Django==3.2.23
 future==0.18.2
 gunicorn==21.2.0
 MouseInfo==0.1.3
