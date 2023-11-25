@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-(h6*j=@=ng$aanome6o@3%1(f1td!244&%ihkc!p$@k#$2d0-=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", ".onrender.com"]
-CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com/"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,10 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'meublog.urls'
 
