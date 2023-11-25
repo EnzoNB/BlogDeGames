@@ -53,9 +53,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+STATICFILES_DIRS = []
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 ROOT_URLCONF = 'meublog.urls'
